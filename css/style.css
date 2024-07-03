@@ -1,0 +1,143 @@
+@import url(./reset.css);
+
+body {
+    background-color: rgba(249, 249, 249, 1);
+}
+
+h5 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: .75rem;
+}
+
+aside {
+    background-color: white;
+    padding: 1.375rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    grid-area: sidebar;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .85fr repeat(5, 1.1fr);
+    grid-template-rows: .39fr repeat(3, 2fr);
+    grid-template-areas: 
+    "nav nav nav nav nav nav" 
+    "sidebar . . . . ." 
+    "sidebar . . . . ." 
+    "sidebar . . . . .";
+}
+
+.navbar {
+    width: 100%;
+    height: 3.5rem;
+    background-color: white;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    grid-area: nav;
+}
+
+.navbar .left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar .right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar .center {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.navbar .center .search-left {
+    width: 22rem;
+    height: 2rem;
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-right: 0;
+}
+
+.navbar .center .search-right {
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid rgba(204, 204, 204, 1);
+}
+
+.navbar .right #avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+aside .feature {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .9rem;
+}
+
+aside .feature p {
+    font-size: 0.875rem;
+}
+
+.video {
+    width: 17.625rem;
+    height: 16.375rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    place-self: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.video > img {
+    width: 100%;
+    height: 8.75rem;
+}
+
+.video .video-description {
+    width: 100%;
+    height: 4.625rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: inherit;
+}
+
+.video .video-description > img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.video .video-description .video-data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+}
